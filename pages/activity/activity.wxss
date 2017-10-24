@@ -1,0 +1,53 @@
+/* pages/activity/activity.wxss */
+@import "../wxParse/wxParse.wxss";
+.title{
+  text-align: center;
+  width: 561.6rpx;
+  margin: 0 auto;
+  margin-top: 36.27rpx;
+  font-size: 37.44rpx;
+  color: #333;
+}
+.time{
+  text-align: center;
+  margin-top: 23.4rpx;
+  margin-bottom: 46.8rpx;
+  color: #999;
+  font-size: 28.08rpx
+}
+.hd_cont{
+  padding: 0 23.4rpx;
+  color: #666;
+  font-size: 32.76rpx;
+  line-height: 58rpx
+}
+ image{
+  margin-top: 35.1rpx;
+  width: 100% !important;
+  height: 458.rpx;
+} 
+form text,.section__title{
+  display: block;
+  padding: 0 23.4rpx;
+  margin-top:35.1rpx;
+  margin-bottom: 23.4rpx;
+  font-size: 32.76rpx;
+  color: #333 
+}
+input{
+  border: 1px solid #d8d8d8;
+  margin: 0 23.4rpx;
+  padding: 30.42rpx 23.4rpx;
+  font-size: 30.42rpx;
+  color: #666
+}
+.btn{
+  width: 100%;
+  background: #34C289;
+  line-height: 114.66rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 70.2rpx;
+  font-size: 37.44rpx;
+  border-radius: 0
+}

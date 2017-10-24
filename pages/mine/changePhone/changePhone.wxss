@@ -1,0 +1,45 @@
+/* pages/mine/changePhone/changePhone.wxss */
+input{
+  height: 93.6rpx;
+  background-color: #fff;
+  margin-bottom: 11.7rpx;
+  font-size: 32.76rpx;
+  color: #999;
+  padding-left: 23.4rpx
+}
+.first{
+  margin-top: 23.4rpx;
+}
+.wrap{
+  position: relative
+}
+.hq{
+  position: absolute;
+  right: 23.4rpx;
+  top: 50%;
+  z-index: 2;
+  height: 60.84rpx;
+  line-height: 60.84rpx;
+  background: #34C289;
+  border-radius: 7.02rpx;
+  font-size: 28.08rpx;
+  color: #fff;
+  width: 163.8rpx;
+  text-align: center;
+  transform: translateY(-30.42rpx)
+}
+button{
+  height: 93.6rpx;
+  background-color: #34C289;
+  border-radius: 7.02rpx;
+  color: #fff;
+  line-height: 93.6rpx;
+  width: 655.2rpx;
+  position: fixed;
+  left: 50%;
+  bottom: 327.6rpx;
+  transform: translateX(-327.6rpx)
+}
+.color{
+  color: #ccc
+}

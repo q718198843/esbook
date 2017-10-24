@@ -1,0 +1,27 @@
+<!--pages/mine/reBuy/reBuy.wxml-->
+<view class='top_line'></view>
+<view class='wrap' wx:for="{{ item }}" wx:key="{{ index }}">
+<!-- {{ !sell ? "detail" : ""}} -->
+  <view class='cont'  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"  data-index="{{index}}" animation="{{ aa==index ? animData : '' }}">
+    <!-- <view class='xj' style='{{item.shelfTypes.key == "up" ? "":b_img}}'></view> -->
+    <image src='/images/tabbar/12@2x.png' class='xj {{item.shelfTypes.key == "up" ? "hide":"show"}}'></image>
+    <view class='left' bindtap='shopxq' data-id="{{item.id}}">
+      <image src='{{item.imageUrl[0]}}'></image>
+    </view>
+    <view class='right' bindtap='shopxq' data-id="{{item.id}}">
+      <view class='top'>
+        <text class='name'>{{item.name}}</text>
+        <text class='{{ sell ? "hide": "" }}'>出售</text>
+      </view>
+      <view class='price'>${{item.price == undefined ? 0 : item.price}}</view>
+      <view class='time'>{{item.createTime}}</view>
+    </view>
+  </view>
+  <view class='hk'>
+    <view class='bj' catchtap='{{item.bookTypes.key == "sell" ? "detail" : "buy"}}' data-id='{{item.id}}' data-type="编辑">编辑</view>
+    <view class='del' catchtap='{{ item.shelfTypes.key == "up" ? "detail" : "upShop" }}' data-id='{{item.id}}' data-type="下架">{{ item.shelfTypes.key == "up" ? "下架" : "上架" }}</view>
+  </view>
+</view>
+<image src='/images/mine/ts_hd.png' class='prompt' wx:if="{{ item != '' }}"></image>
+<view class='jzdh' wx:if="{{jzdh}}"></view>
+<image src='/images/kong.png' id='kong' wx:if="{{ item =='' }}"></image>

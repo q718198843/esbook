@@ -1,0 +1,28 @@
+/* pages/mine/feedback/feedback.wxss */
+.view{
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 23.4rpx;
+  border:1px solid transparent
+}
+textarea{
+  background-color: #fafafa;
+  width: 655.2rpx;
+  margin: 0 auto;
+  padding: 23.4rpx;
+  margin-top: 23.4rpx;
+  font-size: 30.42rpx;
+  color: #999
+}
+.btn{
+  height: 102.96rpx;
+  background-color: #34C289;
+  color: #fff;
+  font-size: 37.44rpx;
+  border-radius: 0;
+  border: none;
+  position: fixed;
+  width: 702rpx;
+  bottom: 70.2rpx;
+  left: 23.4rpx
+}

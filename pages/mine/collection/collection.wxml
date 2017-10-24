@@ -1,0 +1,27 @@
+<!--pages/mine/collection/collection.wxml-->
+<view class='top_line'></view>
+<view class='wrap' wx:for="{{collection}}" wx:key="{{ index }}">
+  <view class='top'>
+    <view class='left' data-id="{{item.userId}}" bindtap='others'>
+      <image src='{{item.headPortrait}}'></image>
+    </view>
+    <view class='bet' data-id="{{item.userId}}" bindtap='others'>
+      {{item.userName}}
+      <image src='{{ item.gender == 2 ? "/images/index/4@3x.png":"/images/index/3@3x.png" }}'></image>
+    </view>
+    <view class='right'>{{item.createTime}}</view>
+  </view>
+  <view class='mid' data-id="{{item.id}}" bindtap='detail'>
+    <image src='{{item.imageUrl}}' bindload="imageLoad" data-index="{{ index }}" 
+style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+  </view>
+  <view class='bot' data-id="{{item.id}}" bindtap='detail'>
+    <view class='bookName'>
+      {{item.name}}
+      <text>出售</text>
+    </view>
+    <view class='price'>${{item.price!=undefined ? item.price : 0}}</view>
+  </view>
+</view>
+<view style='height:23.4rpx'></view>
+<image src='/images/kong.png' id='kong' wx:if="{{ collection =='' }}"></image>

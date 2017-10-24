@@ -1,0 +1,316 @@
+/* pages/detail/Detail.wxss */
+.header{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px 0px rgba(66,66,66,0.35);
+  height: 126.36rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.header .left{
+  width: 79.56rpx;
+  height: 79.56rpx;
+  margin-left: 23.4rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+.header .mid{
+  display: flex;
+  flex: 1;
+  margin-left: 23.4rpx;
+  color: #333;
+  font-size: 30.42rpx;
+  align-items: center;
+}
+.header .mid text{
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.header .mid image{
+  width: 30.42rpx;
+  height: 30.42rpx;
+  margin-left: 11.7rpx;
+}
+.header .right{
+  color: #999;
+  font-size: 28.08rpx;
+  margin-right: 23.4rpx;
+}
+.cont{
+  width: 100%;
+  background: #FFFFFF;
+  margin-top: 23.4rpx;
+  box-shadow: 0px 2px 4px 0px rgba(65,65,65,0.35);
+}
+.cont .top{
+  padding: 0 23.4rpx;
+  background-color: #fff
+}
+.cont .top .bookName{
+  padding-top: 35.1rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  font-size: 37.44rpx;
+}
+.cont .top .bookName text{
+  width: 600rpx
+}
+.cont .top .bookName image{
+  width: 42.12rpx;
+  height: 42.12rpx;
+}
+.cont .top .price{
+  padding-bottom: 23.4rpx;
+  color: #E92A2F;
+  font-size: 37.44rpx;
+  margin-top: 23.4rpx;
+}
+.cont .top .price text{
+  color: #666;
+  font-size: 28.08rpx;
+}
+.cont .mid{
+  width: 100%;
+  text-align: center;
+  position: relative
+}
+.cont .mid image{
+  width: 100%;
+  /* height: 397.8rpx; */
+  margin-bottom: 11.7rpx
+}
+.cont .bot{
+  padding: 23.4rpx 23.4rpx;
+  font-size: 32.76rpx;
+}
+.cont .bot .address{
+  color: #333;
+  margin-bottom: 11.7rpx;
+  width: 585rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.cont .bot .des{
+  color: #666;
+  margin-bottom: 35.1rpx;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 102.96rpx;
+  background-color: #fff;
+  border-top: 1px solid #d8d8d8;
+  font-size: 32.76rpx;
+  display: flex;
+  align-items: center;
+}
+.footer view{
+  text-align: center;
+  width: 50%
+}
+.footer .contact{
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.footer .contact image{
+  width: 40.95rpx;
+  height: 37.44rpx;
+  margin-right: 23.4rpx
+}
+.footer .collection{
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.footer .collection image{
+  width: 37.44rpx;
+  height: 37.44rpx;
+  margin-right: 23.4rpx
+}
+.footer .xj{
+  color: #333
+}
+.footer .bj{
+  color: #34C289;
+}
+.footer::after{
+  content: "";
+  height: 39.78rpx;
+  width: 1px;
+  background-color: #d8d8d8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-19.89rpx)
+}
+.comment{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 23.4rpx;
+}
+.comment .head{
+  padding-left: 23.4rpx;
+  height: 91.26rpx;
+  line-height: 91.26rpx;
+  font-size: 30.42rpx;
+  color: #666
+}
+.comList{
+  width: 100%;
+}
+.com{
+  margin: 0 23.4rpx;
+  border-bottom: 1px solid #d8d8d8
+}
+.com .com{
+  border-bottom: none;
+  border-top: 1px solid #d8d8d8;
+  margin-left: 127.53rpx
+}
+.com .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35.1rpx 0;
+  width: 100%;
+}
+.com .top image{
+  width: 79.56rpx;
+  height: 79.56rpx;
+  border-radius: 50%;
+}
+.com .top .userName{
+  flex-grow: 1;
+  margin-left: 35.1rpx;
+  font-size: 37.44rpx;
+  color: #333333;
+}
+.com .time{
+  color: #999;
+  font-size: 32.76rpx;
+  padding-left: 127.53rpx;
+  margin-bottom: 38.61rpx;
+}
+.com .mid{
+  font-size: 32.76rpx;
+  color: #666;
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden; */
+  margin-bottom: 35.1rpx;
+  margin-left: 127.53rpx
+}
+.com .bot{
+  margin-bottom: 23.4rpx;
+  margin-left: 127.53rpx;
+  /* width: 100% */
+}
+.com .bot image{
+  width: 129.87rpx;
+  height: 129.87rpx;
+  margin-right: 7.02rpx;
+}
+
+.zw{
+  font-size: 32.76rpx;
+  color: #666;
+  width: 100%;
+  text-align: center;
+  padding: 35.1rpx 0;
+}
+.wrap{
+  background-color: rgba(0, 0, 0, .5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.choice{
+  position: fixed;
+  left: 0;
+  bottom: -500rpx;
+  width: 100%;
+  display:  flex;
+  align-items: center;
+  flex-direction: column;
+}
+.choice>view{
+  width: 702rpx;
+  text-align: center;
+  line-height: 102.96rpx;
+  background-color: #fff;
+  border-radius: 23.4rpx;
+  color: #333;
+  font-size: 37.44rpx
+}
+.choice .photo{
+  border-bottom: 1px solid #d8d8d8
+}
+.choice .close{
+  margin-top: 23.4rpx;
+}
+.tran{
+  display: block
+}
+.tran .choice{
+  bottom: 23.4rpx;
+}
+.share{
+  height: 322.92rpx;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: -500rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column
+}
+.share image{
+  width: 84.24rpx;
+  height: 84.24rpx;
+  border-radius: 50%;
+  margin-top: 46.8rpx;
+  margin-bottom: 23.4rpx
+}
+.share .title{
+  font-size: 32.76rpx;
+  color: #333;
+}
+.share .fs{
+  font-size: 28.08rpx;
+  color: #999
+}
+.share .shut{
+  position: absolute;
+  right:23.4rpx;
+  top: 23.4rpx;
+  margin: 0;
+  width: 23.4rpx;
+  height: 23.4rpx
+}
+.share_btn{
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: auto;
+  line-height: normal
+}
+.share_btn::after{
+  width: 0;
+  height: 0
+}

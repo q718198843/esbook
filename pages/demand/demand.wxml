@@ -1,0 +1,76 @@
+<!--pages/demand/demand.wxml-->
+<view class='top_line'></view>
+<form bindsubmit="submit" bindreset="Reset">
+  <view class="section">
+    <view class="section__title">商品标题：</view>
+    <input name="name" placeholder="请输入商品标题" type='text' id='BookName' value='{{bookName}}'/>
+  </view>
+  <view class='wrap'>
+    <view class='text'>分类</view>
+    <view class='category'>
+      <block wx:for="{{category_list}}" wx:key="{{index}}">
+        <view class='cate {{ item.state ? "active" : ""}} {{ item.length<3 ? "two":"" }}' bindtap="cateTab" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+   <view wx:if="{{ category_list[0].state }}">
+    <view wx:if="{{ bookIf }}">
+     <view class='line'></view>
+    <view class='list'>
+      <view class='left'>课程代码</view>
+      <view class='m_right'>
+        <!-- <input type='text' placeholder='请输入课程代码' name='Bookcode' value='{{kong}}'></input> -->
+        <!-- <picker mode="selector" bindchange="PickerChangeCode" value="0" range="{{codeData}}" range-key="{{'code'}}">
+          <text>{{codeText}}</text>
+          <image src='/images/upload/xx_1@2x.png'></image>
+        </picker> -->
+        <import src="/pages/wxSearch/wxSearch.wxml"/>
+          <input type='text' placeholder='{{codeText}}' name='Bookcode' value='{{kong}}' bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" ></input> 
+          <image src='/images/upload/xx_1@2x.png'></image>
+        <template is="wxSearch" data="{{wxSearchData}}"/>
+
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='list'>
+      <view class='left'>课程编号</view>
+      <view class='m_right'>
+        <!-- <input type='number' placeholder='请输入课程编号' name='Bookid' value='{{kong}}'></input> -->
+        <picker mode="selector" bindchange="PickerChangeCodeId" value="0" range="{{codeIdData}}" range-key="{{'code'}}">
+          <text>{{codeIdText}}</text>
+          <image src='/images/upload/xx_1@2x.png'></image>
+        </picker>
+      </view>
+    </view>
+    <view class='line'></view>
+    </view>
+    <view class='list'>
+      <view class='left'>非教材书籍 <text>(没有课程代码和课程编号)</text></view>
+      <image src='{{ bookIf ? "/images/upload/5@3x.png":"/images/upload/5@2x.png" }}' bindtap='bookif'></image>
+    </view>
+   </view>
+  <view class="section">
+    <view class="section__title">详情内容：</view>
+    <textarea placeholder="请输入详情内容" id="BookCont" name="cont" value='{{desc}}'/>
+    <view class='thumbnail'>
+      <view class='photo'>
+        <block wx:for="{{images}}" wx:key="{{index}}">
+          <view>
+            <image src='{{ item }}' bindtap='previewImage' data-src="{{item}}"></image>
+            <image src='/images/upload/1@2x.png' class='del' data-index='{{index}}' bindtap='delImage'></image>
+          </view>
+        </block> 
+        <image src='/images/upload/2@2x.png' class='up' bindtap='upPhoto'></image> 
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section__title">期待价格：<span>(选填)</span></view>
+    <input name="price" placeholder="请输入商品价格" type='number' id="BookPrice"/>
+  </view>
+  <button form-type='submit' class='btn'>提交</button>
+</form>
+<view class='hint' wx:if="{{ hintHide }}">
+  <icon type="warn" size="30" color='#ccc'/>
+  <view>{{hintTXT}}</view>
+</view>

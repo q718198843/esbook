@@ -1,0 +1,40 @@
+/* pages/mine/follow/follow.wxss */
+.wrap{
+  width: 100%;
+  height: 149.76rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11.7rpx;
+}
+.wrap:nth-child(1){
+  border-top: 1px solid #d8d8d8
+}
+.left{
+  height: 102.96rpx;
+  width: 102.96rpx;
+  border-radius: 50%;
+  margin-left: 23.4rpx;
+  overflow: hidden
+}
+.mid{
+  flex-grow: 1;
+  font-size: 32.76rpx;
+  color: #333;
+  margin-left: 23.4rpx
+}
+.right{
+  width: 121.68rpx;
+  height: 51.48rpx;
+  border-radius: 117rpx;
+  border:1px solid #333;
+  text-align: center;
+  line-height: 51.48rpx;
+  margin-right: 23.4rpx;
+  font-size: 28.08rpx;
+}
+.right.active{
+  border-color: #34C289;
+  color: #34C289
+}

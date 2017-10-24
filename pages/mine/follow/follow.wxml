@@ -1,0 +1,16 @@
+<!--pages/mine/follow/follow.wxml-->
+<view class='top_line'></view>
+<block wx:for="{{follow}}" wx:key="{{index}}">
+  <view class='wrap'>
+  <view class='left'>
+    <image src="{{item.headPortrait}}" data-id="{{item.id}}" bindtap='others'></image>
+  </view>
+  <view class='mid' data-id="{{item.id}}" bindtap='others'>
+    {{item.name}}
+  </view>
+  <view class='right {{item.isfollow ? "active" : ""}}' data-id='{{item.id}}' bindtap='follow' data-index='{{index}}'>
+    已关注
+  </view>
+</view>
+</block>
+<image src='/images/kong.png' id='kong' wx:if="{{ follow =='' }}"></image>

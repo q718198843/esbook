@@ -1,0 +1,173 @@
+/* pages/editshop/editshop.wxss */
+@import "/pages/wxSearch/wxSearch.wxss";
+.btn{
+  background: #34C289;
+  line-height: 114.66rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 37.44rpx;
+  border: none;
+  width: 100%;
+  border-radius:0 
+}
+page{
+  height: 100%;
+  background-color: #fff
+}
+.wrap{
+  padding:0 23.4rpx
+}
+.wrap_t{
+  margin-right: -23.4rpx
+}
+.line{
+  height: 1px;
+  background-color: #d8d8d8;
+  width: 100%;
+  margin-left: -23.4rpx;
+  padding-right: 46.8rpx
+}
+input{
+  height: 102.96rpx;
+  font-size: 32.76rpx;
+  color: #999;
+}
+.category{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  padding-top: 35.1rpx;
+  padding-bottom: 11.7rpx;
+}
+.category .cate{
+  white-space: normal;
+  padding: 16.38rpx 23.4rpx;
+  font-size: 28.08rpx;
+  color: #34C289;
+  /* height: 28.08rpx;
+  line-height: 28.08rpx; */
+  border:1px solid #34C289; 
+  background-color: #fff;
+  border-radius: 117rpx;
+  margin-bottom: 23.4rpx;
+  margin-right: 0rpx; 
+  margin-left: 16rpx;   
+}
+.category .cate.active{
+  background: #34C289;
+  box-shadow: 0px 2px 8px 0px #34C289; 
+  color: #fff;
+  border: 1px solid transparent  
+}
+.category .cate.two{
+  padding: 16.38rpx 32.76rpx
+}
+.text{
+  font-size: 32.76rpx;
+  color: #333;
+  padding-top: 23.4rpx
+}
+textarea{
+  padding: 35.1rpx 0;
+  color: #999;
+  font-size:  32.76rpx;
+  height: 152.1rpx
+}
+.photo{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 23.4rpx 
+}
+.photo view{
+  position: relative;
+  height: 114.66rpx;
+  margin-right: 17.55rpx; 
+  margin-top: 46.8rpx;
+}
+.photo image{
+  width: 114.66rpx;
+  height: 114.66rpx;
+}
+.photo .up{
+  width: 79.56rpx;
+  height: 79.56rpx;
+  margin-right: 17.55rpx; 
+  margin-top: 46.8rpx;
+}
+.photo view .del{
+  width: 37.44rpx;
+  height: 37.44rpx;
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx
+}
+.list{
+  display: flex;
+  height: 102.96rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.list .left{
+  color: #333;
+  font-size: 32.76rpx;
+}
+.list .left text{
+  color: #999
+}
+.list input{
+  text-align: right
+}
+.list image{
+  width: 37.44rpx;
+  height: 37.44rpx
+}
+.bot_text{
+  font-size: 23.4rpx;
+  color: #666;
+  background-color: #fafafa;
+  padding-top: 11.7rpx;
+  padding-bottom: 37.44rpx
+}
+.list .right image{
+  width: 44.46rpx;
+  height: 40.95rpx;
+  margin-left: 21.06rpx
+}
+.bot{
+  width: 100%;
+  display: flex
+}
+.bot button:nth-child(2){
+  background-color: #FFE538;
+  color: #333
+}
+button::after{
+  width: 0;
+  height: 0
+}
+.m_right{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.m_right text{
+  font-size: 32.76rpx;
+  color: #999;
+}
+.m_right image{
+  width: 11.7rpx;
+  height: 11.7rpx;
+  position: absolute;
+  right: -5px;
+  top:30%
+}
+.wxSearch{
+  z-index: 99;
+  left: 22rpx
+}
+.wxSearchMindKeyItem{
+  background-color: #fff;
+  align-items: center;
+  justify-content: center
+}

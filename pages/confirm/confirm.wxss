@@ -1,0 +1,60 @@
+/* pages/confirm/confirm.wxss */
+.wrap{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px 0px rgba(66,66,66,0.35);
+  width: 702rpx;
+  margin: 0 auto;
+  margin-top: 23.4rpx;
+  overflow: hidden
+}
+.wrap>.image{
+   width: 100%;
+  height: 308.88rpx;
+  position: relative; 
+}
+
+image{
+  width: 100%;
+  height: 100%
+}
+.bot{
+  width: 100%;
+  overflow: hidden;
+  padding: 23.4rpx;
+}
+.bookName{
+  color: #333;
+  font-size: 32.76rpx;
+}
+.bookName text{
+  color: #34C289;
+  font-size: 28.08rpx
+}
+.price{
+  color: #E92A2F;
+  font-size: 37.44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 23.4rpx
+}
+.price image{
+  width: 35.1rpx;
+  height: 37.44rpx;
+  padding-right: 46.8rpx
+}
+.btn{
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  height: 102.96rpx;
+  background-color: #34C289;
+  color: #fff;
+  font-size: 32.76rpx;
+  line-height: 102.96rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2
+}

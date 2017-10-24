@@ -1,0 +1,101 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+/* .margin-bottom{
+  margin-bottom: 138.4rpx
+} */
+page{
+  background-color: #fafafa;
+  font-family: PingFang-SC-Regular;
+}
+image{
+  width: 100%;
+  height: 100%
+}
+.show{
+  display: block
+}
+.hide{
+  display: none
+}
+.top_line{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d8
+}
+.hint{
+  height: 200rpx;
+  width: 200rpx;
+  background-color: rgba(0, 0, 0,.3);
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 23.4rpx;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  z-index: 999;
+  transform: translate(-100rpx,-100rpx)
+}
+.hint icon{
+  margin-bottom: 23.4rpx
+}
+.jzdh{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 99
+}
+.wxSearch{
+  border: 1px solid #d8d8d8
+}
+.wxSearchMindKeyList .wxSearchMindKeyItem{
+  color: #999
+}
+.image1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+  -webkit-filter: blur(1px); /* Chrome, Opera */
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);    
+  filter: blur(10px);
+  opacity: 0.7;
+}
+.image2{
+  position: relative;
+  z-index: 1
+}
+#kong{
+  width: 748.8rpx;
+  height: 369.72rpx;
+  margin: 0 auto
+}
+.isRead{
+  position: absolute;
+  right: -5.36rpx;
+  top: -5.36rpx;
+  background: #DE2D48;
+  width: 18.72rpx;
+  height: 18.72rpx;
+  border-radius: 50%
+}

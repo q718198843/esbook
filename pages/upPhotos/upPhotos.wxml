@@ -1,0 +1,20 @@
+<!--pages/upPhotos/upPhotos.wxml-->
+<view class='overflow'>
+  <view class='icon'>
+  <image src='/images/icon-1.png'></image>
+</view>
+<view class='up'>
+  <view bindtap='barcode'>扫描书本条形码上传</view>
+  <view bindtap='upPhoto'>拍摄照片上传</view>
+</view>
+  <view class='wrap' style='display:{{ display }}' bindtap='close'></view>  
+  <view class='choice' animation="{{animData}}">
+    <view class='top'>
+      <view class='photo' bindtap='photo' data-type="album">从相册中选</view>
+      <view class='photograph' bindtap="photo" data-type="camera">拍照</view>
+    </view>
+    <view class='close' bindtap='close'>取消</view>
+  </view>
+</view>
+{{data}}
+

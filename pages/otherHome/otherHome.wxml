@@ -1,0 +1,36 @@
+<!--pages/otherHome/otherHome.wxml-->
+  <view class='avatar_big'>
+  <image src='/images/others/3@2x.png'></image>
+  <view class='touxiang'>
+    <view class='avatar_sm'>
+      <image src='{{ heData.user.headPortrait}}'></image>
+    </view>
+    <view class='follow'>
+      <image src='{{ heData.user.isfollow ? "/images/others/1@2x.png" : "/images/others/2@2x.png"}}' bindtap='follow' data-id="{{heData.user.id}}"></image>
+    </view>
+  </view>
+  <view class='name'>
+    {{ heData.user.name }}
+     <image src='{{ heData.user.gender == 2 ? "/images/index/4@3x.png":"/images/index/3@3x.png" }}'></image> 
+  </view>
+  <view class='school'>
+    {{ heData.user.school }}
+  </view>
+</view>
+<view class='catTab'>
+  <view class='{{bookTypes == "sell" ? "active" : ""}}' bindtap='typeTab' data-type="sell">发布的商品</view>
+  <view class='{{bookTypes != "sell" ? "active" : ""}}' bindtap='typeTab' data-type="buy">求购的商品</view>
+</view>
+<view class='wrap' wx:for="{{ bookTypes == 'sell' ? booksSell : booksBuy }}" wx:key="{{ index }}" bindtap='detail' data-id="{{item.id}}">
+  <view class='image'>
+    <image src='{{item.imageUrl[0]}}' bindload="imageLoad" data-index="{{ index }}" class='image1'></image>  
+    <image src='{{item.imageUrl[0]}}' bindload="imageLoad" data-index="{{ index }}"  mode="aspectFit" class='image2'></image>
+  </view>
+  <view class='bot'>
+    <view class='bookName'>{{item.name}}<text>出售</text></view>
+    <view class='time'>
+      {{ item.createTime }}
+      <text class='price'>${{item.price ? item.price : 0}}</text>
+    </view>
+  </view>
+</view>

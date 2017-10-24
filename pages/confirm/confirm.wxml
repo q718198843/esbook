@@ -1,0 +1,24 @@
+<!--pages/confirm/confirm.wxml-->
+<view>{{imageURL}}</view>
+<view class='top_line'></view>
+<block wx:for="{{confirmData}}" wx:key="{{key}}">
+<view class='wrap'>
+  <view class='image' catchtap='fanhui' data-item="{{item}}">
+    <image src='{{item.imgsIds[0]}}' class='image1'></image>
+     <image src='{{item.imgsIds[0]}}' mode="aspectFit" class='image2'></image> 
+  </view>
+  <view class='bot'>
+    <view class='bookName'>
+      {{item.name}}
+      <text>出售</text>
+    </view>
+    <view class='price'>
+      ${{item.price}}
+      <image src='/images/upload/del.png' catchtap='del' data-index="{{index}}"></image>
+    </view>
+  </view>
+</view>
+</block>
+<view style='height: 140.96rpx;width: 100%;'></view>
+<button class='btn' bindtap='upload'>提交</button>
+

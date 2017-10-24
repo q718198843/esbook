@@ -1,0 +1,124 @@
+<!--pages/detail/Detail.wxml-->
+<view class='top_line'></view>
+<view class='header'>
+  <view class='left' bindtap='others' data-id="{{books.userId}}">
+    <image src='{{books.headPortrait}}'></image>
+  </view>
+  <view class='mid'>
+    <text>{{books.userName}}</text>
+    <image src='{{ books.gender == 2 ? "/images/index/4@3x.png":"/images/index/3@3x.png" }}'></image>
+  </view>
+  <view class='right'>
+    {{books.createTime}}
+  </view>
+</view>
+<view class='cont'>
+  <view class='top'>
+    <view class='bookName'>
+      <text>{{books.name}}</text>
+      <image src='/images/detail/1@2x.png' bindtap='upPhoto' data-who="分享"></image>
+    </view>
+    <view class='price'>
+      ${{books.price !=undefined ? books.price : 0}}
+      <text>{{books.bookTypes == "sell" ? "出售" : "求购"}}</text>
+    </view>
+  </view>
+  <view class='mid'>
+    <block wx:for="{{books.imageUrl}}" wx:key="{{index}}">
+    <!-- <image src='{{item}}' bindtap='previewImage' data-src="{{item}}" bindload="imageLoad" data-index="{{ index }}" 
+style=" height:{{ images[index].height }}rpx;" class='image1'></image> -->
+      <image src='{{item}}' bindtap='previewImage' data-src="{{item}}" bindload="imageLoad" data-index="{{ index }}" 
+style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image>
+    </block>
+  </view>
+  <view class='bot'>
+    <view class='des'>
+      {{books.describes}}
+    </view>
+    <!-- <view class='address'>地址：{{books.school}}</view> -->
+  </view>
+</view>
+<view class='comment'>
+  <view class='head'>评论<text wx:if="{{comment.length>0}}">({{comment.length}})</text>：</view>
+  <view style='border-top:1px solid #d8d8d8'></view>
+  <view class='comList'>
+    <block wx:for="{{comment}}" wx:key="{{index}}">
+      <view class='com'>
+        <view class='top' bindtap='others' data-id="{{item.userId}}">
+          <image src='{{item.headPortrait}}'></image>
+          <view class='userName'>{{item.name}}</view>
+        </view>
+        <view class='mid' catchtap='huifu' data-id="{{item.id}}" data-userId="{{item.userId}}">
+          {{item.content}}
+        </view>
+        <view class='bot' wx:if="{{item.commentUrl != ''}}">
+        <block wx:for="{{item.commentUrl}}" wx:key="{{idx}}" wx:for-index="idx" >
+            <image src='{{item}}' bindtap='previewImage2' data-src="{{item}}" data-index='{{index}}'></image>
+        </block> 
+        
+        </view>
+        <view class='time'>{{item.commentTime}}</view>
+                  <block wx:for="{{item.booksDeComment}}" wx:key="{{idx2}}" wx:for-index="idx2">
+                  <view class='com'>
+                    <view class='top' bindtap='others' data-id="{{item.userId}}">
+                      <image src='{{item.headPortrait}}'></image>
+                      <view class='userName'>{{item.name}}</view>
+                      
+                    </view>
+                    <view class='mid' catchtap='huifu' data-id="{{item.id}}" data-userId="{{item.userId}}">
+                      {{item.content}}
+                    </view>
+                    <view class='bot' wx:if="{{item.commentUrl != ''}}">
+                    <block wx:for="{{item.commentUrl}}" wx:key="{{idx3}}" wx:for-index="idx3">
+                        <image src='{{item}} 'bindtap='previewImage3' data-src="{{item}}" data-index='{{index}}' data-idx="{{idx2}}"></image>
+                    </block> 
+                    </view>
+                    <view class='time'>{{item.commentTime}}</view>
+                  </view>
+                </block>
+      </view>
+    </block>
+    <view class='zw' wx:if="{{comment.length==0}}">暂无评论</view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<view style='height: 117rpx;'></view>
+<view class='footer'>
+  <view class='contact' wx:if="{{!ismy}}" bindtap='upPhoto' data-who="联系">
+    <image src='/images/detail/2@2x.png'></image>
+    联系卖家
+  </view>
+  <view class='collection' wx:if="{{!ismy}}" bindtap='collection' data-id="{{books.id}}">
+    <image src='{{isCollenction ? "/images/detail/3@2x.png" : "/images/detail/4@2x.png" }}'></image>
+    收藏
+  </view> 
+  <view class='xj' wx:if="{{ismy}}" bindtap='{{books.shelfTypes == "up" ? "xj" : "upShop"}}'>{{books.shelfTypes == 'up' ? "下架" : "上架"}}</view>
+  <view class='bj' wx:if="{{ismy}}" data-types="{{books.bookTypes}}" data-id="{{books.id}}" bindtap='edits'>编辑</view>
+</view>
+
+<view class='wrap' style='display:{{ display }}' bindtap='close' bindtouchmove='close'></view>  
+  <view class='choice' animation="{{animData}}">
+    <view class='top'>
+       <view class='photo' bindtap='addcomm'>留言</view> 
+      <view class='photograph' bindtap='phoneCall'>电话联系</view>
+    </view>
+    <view class='close' bindtap='close'>取消</view>
+  </view>
+  <view class='share' animation="{{animData2}}">
+    <image src='/images/upload/3@3x.png' class='shut' bindtap='close'></image>
+    <view class='title'>分享</view>
+    <button class='share_btn' open-type="share"><image src='/images/detail/wechat@2x.png'></image></button>
+    <view class='fs'>微信</view>
+  </view>
+  <view class='jzdh' wx:if="{{jzdh}}"></view>

@@ -1,0 +1,11 @@
+<!--pages/mine/changePhone/changePhone.wxml-->
+<view class='top_line'></view>
+<form bindsubmit="submit" bindreset="Reset">
+    <input type='number' placeholder='请输入旧手机号码' class='first' name="oldPhone" bindblur="oldPhone" value='{{oldPhone}}'></input>
+  <view class='wrap'>
+    <input type='number' placeholder='请输入新手机号码' name="newPhone"></input>
+    <view class='hq {{ is ? "" : "color" }}' catchtap='hqyzm' data-is="{{is}}">{{ is ? "获取验证码" : num+"s" }}</view>
+  </view>
+    <input type='text' placeholder='请输入验证码' name="code"></input>
+   <button form-type='submit' hover-class='none'>完成</button>
+</form>

@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="margin-bottom">
+  <!--头部  -->
+  <view class='header' bindtap='search'>
+     <image src='/images/index/2@3x.png'></image>
+     点击搜索商品
+  </view>
+  <!--轮播  -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular>
+    <block wx:for="{{bannerimgUrls}}" wx:key="{{index}}">
+      <swiper-item bindtap="activity"  data-bannerType="{{item.bannerType}}" data-id="{{item.sourceId}}">
+        <image src="{{item.imageUrl}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--类别  -->
+  <view class='category'>
+    <block wx:for="{{category_list}}" wx:key="{{index}}">
+      <view class='cate {{num==index ? "active" : ""}} {{ item.length<3 ? "two":"" }}' bindtap="cateTab" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+  <!--出售 求购  -->
+  <view class='sellBuy'>
+    <view bindtap='sellBuy' data-tab="sell" class='{{ bookTypes=="sell" ? "active":"" }}'>出售 </view>
+    <view bindtap='sellBuy' data-tab="buy" class='{{ bookTypes=="buy" ? "active":"" }}'>求购 </view>
+  </view>
+  <!-- <view class='line'>新鲜好货</view> -->
+  <import src="/pages/shopList/shopList.wxml"/>
+  <template is="shopList" data="{{ listLoop }}" />
+  <image src='/images/kong.png' id='kong' wx:if="{{ listLoop == '' }}"></image>
+  <view class='konggao'></view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<import src="/pages/template/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{ tabAc }}" />
+
+<view class="upload" wx:if="{{sc}}" bindtap="delSc" bindtouchmove='delSc'>
+   <image src='/images/index/bg@2x.png' class='mh'></image>
+  <view class='upload_icon'>
+    <view bindtap='sell'>
+      <image src='/images/upload/1@3x.png'></image>
+      <text>出售商品</text>
+    </view>
+    <view bindtap='wantBuy'>
+      <image src='/images/upload/2@3x.png'></image>
+      <text>求购商品</text>
+    </view>
+  </view>
+  <view class='close'>
+    <image src='/images/upload/3@3x.png'></image>
+  </view>
+</view>
+<view class='jzdh' wx:if="{{jzdh}}"></view>

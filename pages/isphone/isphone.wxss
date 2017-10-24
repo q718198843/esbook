@@ -1,0 +1,40 @@
+/* pages/isphone/isphone.wxss */
+page{
+  background-color: #fff
+}
+button{
+  height: 93.6rpx;
+  background: #34C289;
+  border-radius: 7.02rpx;
+  color: #fff;
+  line-height: 93.6rpx;
+  width: 655.2rpx;
+  margin-top: 269.1rpx;
+}
+.wrap{
+  padding: 0 46.8rpx
+}
+.yzm{
+  position: relative;
+  border-bottom: 1px solid #d8d8d8
+}
+.yzm text{
+  position: absolute;
+  right: 0;
+  bottom: 14.04rpx;
+  font-size: 28.08rpx;
+  color: #34C289
+}
+input{
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 32.76rpx;
+  color: #999;
+  margin-top: 70.2rpx
+}
+.yzm input{
+  border: none;
+  margin-right: 150rpx;
+}
+.yzm .color{
+  color: #ccc
+}

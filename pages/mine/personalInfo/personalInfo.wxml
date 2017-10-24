@@ -1,0 +1,74 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class='top_line'></view>
+<view class='mineInfo'>
+  <view bindtap='upPhoto' data-bot="touxiang" class='view'>
+    <text>头像</text>
+    <view>
+      <image src='{{ info.avatar }}' class='touxiang'></image>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <view bindtap='modify' data-type="name" class='view'>
+    <text>用户名</text>
+    <view>
+      <text>{{ info.name }}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <view bindtap='upPhoto' data-bot="sex" class='view'>
+    <text>性别</text>
+    <view>
+     <text>{{ info.gender==2 ? "女" : "男" }}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <view bindtap='changePhone' class='view'>
+    <text>手机号</text>
+    <view>
+      <text>{{ info.tel }}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <picker mode="selector" bindchange="PickerChangeSchool" value="{{ multiIndex }}" range="{{school}}" range-key="{{ 'name' }}" bindcolumnchange="bindcolumnchange">
+  <view class='view'>
+    <text>学校 (zip code)</text>
+    <view>
+      <text>{{ info.school}}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  </picker>
+   <!-- <view class='view'>
+    <text>大学院系</text>
+    <view>
+      <text>{{ major }}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>  -->
+   <!-- <view bindtap='modify' data-type="schoolYear" class='view'>
+    <text>大学学年</text>
+    <view>
+      <text>{{ info.schoolYear }}年</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>  -->
+  <picker value="{{ multiIndex }}" range="{{schoolYear}}" range-key="{{ 'name' }}" bindchange="schoolYear">
+     <view class='view'>
+    <text>大学学年</text>
+    <view>
+      <text>{{ info.schoolYear }}</text>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view> 
+  </picker>
+</view>
+<view>
+  <view class='wrap' style='display:{{ display }}' bindtap='close'></view>  
+  <view class='choice' animation="{{animData}}">
+    <view class='top'>
+      <view class='photo' bindtap='{{ bol ? "photo" : "sex" }}' data-type="{{ bol ? 'album' : '男' }}">{{ bot0 }}</view>
+      <view class='photograph' bindtap='{{ bol ? "photo" : "sex" }}' data-type="{{ bol ? 'camera' : '女' }}">{{ bot1 }}</view>
+    </view>
+    <view class='close' bindtap='close'>取消</view>
+  </view>
+</view>

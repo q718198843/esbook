@@ -1,0 +1,23 @@
+/* pages/mine/input/input.wxss */
+input{
+  height: 102.96rpx;
+  color: #999;
+  font-size: 32.76rpx;
+  padding: 0 23.4rpx;
+  background-color: #fff;
+}
+.name_tel input{
+  margin-top: 24.57rpx
+}
+button{
+  height: 93.6rpx;
+  background-color: #34C289;
+  border-radius: 7.02rpx;
+  color: #fff;
+  line-height: 93.6rpx;
+  width: 655.2rpx;
+  position: fixed;
+  left: 50%;
+  bottom: 327.6rpx;
+  transform: translateX(-327.6rpx)
+}

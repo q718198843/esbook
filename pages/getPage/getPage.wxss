@@ -1,0 +1,8 @@
+/* pages/getPage/getPage.wxss */
+@import "../wxParse/wxParse.wxss";
+.wxParse-p{
+  padding:23.4rpx;
+  color: #666;
+  font-size: 32.76rpx;
+  line-height: 58rpx;
+}

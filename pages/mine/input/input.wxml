@@ -1,0 +1,8 @@
+<!--pages/mine/input/input.wxml-->
+<view class='top_line'></view>
+<form bindsubmit="submit" bindreset="Reset">
+  <view class='name_tel {{ id=="tel" ? "hide":"" }}'>
+    <input type='{{ Itype }}' placeholder='{{ place }}' name="{{ id }}" value='{{ kong }}'></input>
+  </view>
+  <button form-type='submit' class='btn'>提交</button>
+</form>

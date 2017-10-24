@@ -1,0 +1,87 @@
+<!--pages/mine/mine.wxml-->
+  <view class='avatar_big'>
+  <image src='/images/others/3@2x.png'></image>
+  <view class='touxiang' bindtap='setUp'>
+    <view class='avatar_sm'>
+      <image src='{{ avatar_big }}'></image>
+    </view>
+    <view class='setUp'>
+      <image src='/images/mine/0@2x.png'></image>
+    </view>
+  </view>
+  <view class='name'>
+    {{ nickName }}
+     <image src='{{ gender == 2 ? "/images/index/4@3x.png":"/images/index/3@3x.png" }}'></image> 
+  </view>
+  <view class='school'>
+    {{ school }}
+  </view>
+</view>
+<view class='option_list'>
+  <view class='option' bindtap='reBuy' data-type='发布'>
+    <image src='/images/mine/1@2x.png'></image>
+    <view class='text'>
+      我发布的
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <view class='option' bindtap='reBuy' data-type="求购">
+    <image src='/images/mine/3@2x.png'></image>
+    <view class='text'>
+      我求购的
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <view class='option' bindtap='reBuy' data-type="消息">
+    <image src='/images/mine/4@2x.png'></image>
+    <view class='text'>
+      我的消息
+      <view class='isRead' wx:if="{{tabAc.isRead}}"></view>
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+  <!-- <view class='option' bindtap='reBuy' data-type="评论">
+    <image src='/images/mine/4@2x.png'></image>
+    <view class='text'>
+      我的评论
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view> -->
+  <view class='option' bindtap='reBuy' data-type="意见反馈">
+    <image src='/images/mine/5@2x.png'></image>
+    <view class='text'>
+      意见反馈
+      <image src='/images/mine/2@2x.png'></image>
+    </view>
+  </view>
+</view>
+
+ 
+
+
+
+
+
+
+
+
+<import src="/pages/template/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabAc}}"/>
+<view class="upload" wx:if="{{sc}}" bindtap="delSc">
+<image src='/images/index/bg2@2x.png' class='mh' mode="aspectFit"></image>
+  <view class='upload_icon'>
+    <view bindtap='sell'>
+      <image src='/images/upload/1@3x.png'></image>
+      <text>出售商品</text>
+    </view>
+    <view bindtap='wantBuy'>
+      <image src='/images/upload/2@3x.png'></image>
+      <text>求购商品</text>
+    </view>
+  </view>
+  <view class='close'>
+    <image src='/images/upload/3@3x.png'></image>
+  </view>
+</view>
+<view class='jzdh' wx:if="{{jzdh}}"></view>
+

@@ -1,0 +1,90 @@
+<!--pages/editshop/editshop.wxml-->
+<form bindsubmit="submit" bindreset="Reset">
+  <view class='wrap'>
+    <view class='line'></view>
+    <input type='text' name='shopName' placeholder='标题 某某二手书名称' value='{{editshopData.name}}'></input>
+    <view class='line'></view>
+    <view class='wrap_t'>
+      <view class='text'>分类</view>
+      <view class='category'>
+        <block wx:for="{{category_list}}" wx:key="{{index}}">
+          <view class='cate {{ item.state ? "active" : ""}} {{ item.length<3 ? "two":"" }}' bindtap="cateTab" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}
+          </view> 
+        </block>
+      </view>
+    </view>
+   <view wx:if="{{ category_list[0].state }}">
+    <view wx:if="{{ bookIf }}">
+     <view class='line'></view>
+    <view class='list'>
+      <view class='left'>课程代码</view>
+      <view class='m_right'>
+        <!-- <picker mode="selector" bindchange="PickerChangeCode" value="0" range="{{codeData}}" range-key="{{'code'}}">
+          <text>{{codeText}}</text>
+          <image src='/images/upload/xx_1@2x.png'></image>
+        </picker> -->
+        <import src="/pages/wxSearch/wxSearch.wxml"/>
+          <input type='text' placeholder='{{codeText}}' name='Bookcode' bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" ></input> 
+          <image src='/images/upload/xx_1@2x.png'></image>
+        <template is="wxSearch" data="{{wxSearchData}}"/>
+
+
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='list'>
+      <view class='left'>课程编号</view>
+      <view class='m_right'>
+        <picker mode="selector" bindchange="PickerChangeCodeId" value="0" range="{{codeIdData}}" range-key="{{'code'}}">
+          <text>{{codeIdText}}</text>
+          <image src='/images/upload/xx_1@2x.png'></image>
+        </picker>
+      </view>
+    </view>
+    <view class='line'></view>
+    </view>
+    <view class='list'>
+      <view class='left'>非教材书籍 <text>(没有课程代码和课程编号)</text></view>
+      <image src='{{ bookIf ? "/images/upload/5@3x.png":"/images/upload/5@2x.png" }}' bindtap='bookif'></image>
+    </view>
+   </view>
+    <view class='line'></view>
+    <textarea name='desc' placeholder='商品描述' value='{{editshopData.describes}}'></textarea>
+    <view class='photo'>
+        <block wx:for="{{images}}" wx:key="{{index}}">
+          <view>
+            <image src='{{ item.url }}' bindtap='previewImage' data-src="{{item.url}}" data-id="{{item.id}}" data-index='{{index}}'></image>
+            <image src='/images/upload/1@2x.png' class='del' data-index='{{index}}' bindtap='delImage'></image>
+          </view>
+        </block> 
+        <image src='/images/upload/2@2x.png' class='up' bindtap='upPhoto'></image> 
+      </view>
+    <view class='line'></view>
+    <view class='list'>
+      <view class='left'>购买价格</view>
+      <view>
+        <input type='number' placeholder='请输入购买价格' name='price' value='{{editshopData.price}}'></input>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='list'>
+      <view class='left'>原价</view>
+      <view>
+        <input type='number' placeholder='请输入原价(不是必填)' name='Orprice' value='{{editshopData.originalPrice}}'></input>
+      </view>
+    </view>
+        <view class='line'></view>
+    <view class='list'>
+      <view class='left'>商品状态</view>
+      <view class='right'>
+        <image src='{{ editshopData.oldandnew>0 ? "/images/upload/4@2x.png":"/images/upload/3@2x.png" }}' data-index="1" bindtap="state"></image>
+        <image src='{{ editshopData.oldandnew>1 ? "/images/upload/4@2x.png":"/images/upload/3@2x.png" }}' data-index="2" bindtap="state"></image>
+        <image src='{{ editshopData.oldandnew>2 ? "/images/upload/4@2x.png":"/images/upload/3@2x.png" }}' data-index="3" bindtap="state"></image>
+      </view>
+    </view>
+    <view class='bot_text'>三颗星代表"状态完美"; 两颗星代表"状态优秀"; 一颗星代表"状态一般"</view>
+  </view>
+  <view class='bot'>
+    <button form-type='submit' class='btn'>保存</button>
+  </view>
+</form>

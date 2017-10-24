@@ -1,0 +1,34 @@
+<!--pages/list/list.wxml-->
+  <!--头部  -->
+  <view class='header' bindtap='search'>
+     <image src='/images/index/2@3x.png'></image>
+     点击搜索商品
+  </view>
+  <view class='list_tab'>
+    <view class='tab {{listTabNum == 0 ? "active" : ""}}' bindtap="listTab" data-index='0'>分类</view>
+    <view class='tab {{listTabNum == 1 ? "active" : ""}}' bindtap="listTab" data-index='1'>发布时间</view>
+    <view class='tab {{listTabNum == 2 ? "active" : ""}}' bindtap="listTab" data-index='2'>价格</view>
+    <view class='details {{ listType ? "show" : "hide"}}'>
+      <!--类别  -->
+      <view class='category  {{ listType ? "show" : "hide"}}'>
+        <block wx:for="{{category_list}}" wx:key="{{index}}">
+      <view class='cate {{num==index ? "active" : ""}} {{ item.length<3 ? "two":"" }}' bindtap="cateTab" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+     <view class='details {{ listPrice ? "show" : "hide"}}'>
+      <view class='price_order'>
+        <view class='price_high {{priceNum == 0 ? "active" : ""}}' bindtap='priceTab' data-index='0'>价格从高到低</view>
+        <view class='price_low {{priceNum == 1 ? "active" : ""}}' bindtap='priceTab' data-index='1'>价格从低到高</view>
+      </view>
+     </view> 
+     <view class='details {{ listTime ? "show" : "hide"}}'>
+      <view class='price_order'>
+        <view class='price_high {{timeNum == 0 ? "active" : ""}}' bindtap='timeTab' data-index='0'>最新发布</view>
+        <view class='price_low {{timeNum == 1 ? "active" : ""}}' bindtap='timeTab' data-index='1'>最老发布</view>
+      </view>
+     </view> 
+  </view>
+  <import src="/pages/shopList/shopList.wxml" />
+  <template is="shopList" data="{{ listLoop }}" />
+  <view class='kong' wx:if="{{listLoop == ''}}">搜索数据为空</view>

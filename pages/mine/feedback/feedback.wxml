@@ -1,0 +1,12 @@
+<!--pages/mine/feedback/feedback.wxml-->
+<view class='top_line'></view>
+<form bindsubmit="submit">
+  <view class='view'>
+    <textarea name="yj" placeholder='请输入意见反馈'></textarea>
+  </view>
+  <button form-type='submit' class='btn'>提交</button>
+</form>
+<view class='hint' wx:if="{{ hintHide }}">
+  <icon type="warn" size="30" color='#ccc'/>
+  <view>{{hintTXT}}</view>
+</view>

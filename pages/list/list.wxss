@@ -1,0 +1,145 @@
+/* pages/list/list.wxss */
+@import "/pages/shopList/shopList.wxss";
+page{
+  background-color: #fff;
+}
+.header{
+  background-color: #fff;
+  height:70rpx;
+  border: 1px solid #d8d8d8;
+  margin: 11.7rpx;
+  line-height: 70rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 11.7rpx;
+  color: #999
+}
+.header image{
+  width: 46.8rpx;
+  height: 46.8rpx;
+  margin: 0 23.4rpx
+}
+.list_tab{
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  position: relative;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  justify-content: space-around;
+}
+.list_tab .tab{
+  text-align: center;
+  line-height: 102.96rpx;
+  font-size: 32.76rpx;
+  color: #666;
+}
+/* .list_tab::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 32.76rpx;
+    background-color: #d8d8d8;
+    top: 50%;
+    transform: translateY(-50%)
+} */
+.list_tab .tab.active{
+  color: #34C289
+}
+.list_tab .details{
+  position: absolute;
+  left: 0;
+  top:102.96rpx;
+  background-color: #fff;
+  width: 100%;
+  border-top: 1px solid #d8d8d8;
+  box-shadow: 0px 2px 4px 0px rgba(65,65,65,0.35);
+   padding: 35.1rpx 0;
+   z-index: 2
+}
+.category{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+}
+.category .cate{
+  white-space: normal;
+  padding: 16.38rpx 23.4rpx;
+  font-size: 28.08rpx;
+  color: #34C289;
+  /* height: 28.08rpx;
+  line-height: 28.08rpx; */
+  border:1px solid #34C289;
+  background-color: #fff;
+  border-radius: 117rpx;
+  margin-bottom: 23.4rpx;
+  margin-right: 16.38rpx;
+  margin-left: 16.38rpx; 
+}
+.category .cate.active{
+  background: #34C289;
+  box-shadow: 0px 2px 8px 0px #34C289;
+  color: #fff;
+  border: 1px solid transparent
+}
+.category .cate.two{
+  padding: 16.38rpx 32.76rpx
+}
+.price_order{
+  display: flex;
+  justify-content: space-around
+}
+.price_order view{
+  color: #333;
+  font-size: 30.42rpx;
+  padding: 18.72rpx 46.8rpx;
+  border:1px solid #d8d8d8;
+  border-radius: 117rpx
+}
+.price_order view.active{
+  background: #34C289;
+  box-shadow: 0px 2px 6px 0px #34C289;
+  border:none;
+  color: #fff
+}
+.search input{
+  border: 1px solid #d8d8d8;
+  height: 70rpx;
+  color: #999;
+  margin: 11.7rpx;
+  border-radius: 11.7rpx;
+  padding-left: 84.24rpx;
+  padding-right:84.24rpx;
+  font-size: 32.76rpx;
+  background-color: #fafafa
+}
+.search{
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  height: 102.9rpx
+}
+.search image{
+  width: 46.8rpx;
+  height: 46.8rpx;
+  margin: 0 23.4rpx;
+  position: absolute;
+  left:15rpx;
+  top: 16.38rpx
+}
+.kong{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px
+}
+.modal{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  z-index: -1
+}

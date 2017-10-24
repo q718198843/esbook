@@ -1,0 +1,41 @@
+/* pages/mine/comment/comment.wxss */
+.wrap{
+  padding: 23.4rpx;
+  margin-bottom: 11.7rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between
+}
+.left{
+  width: 102.96rpx;
+  height: 102.96rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+.mid{
+  padding-left: 23.4rpx;
+  flex-grow: 1
+}
+.mid view:nth-child(1){
+  color: #333;
+  font-size: 32.76rpx;
+}
+.mid view:nth-child(2){
+  color: #666;
+  font-size: 30.42rpx;
+  padding-top: 25.74rpx;
+  width: 450.38rpx;
+  word-wrap: break-word
+}
+.right{
+  font-size: 28.08rpx;
+  color: #999
+}
+.unread{
+  width: 23.4rpx;
+  height: 23.4rpx;
+  background: #E9395B;
+  border-radius: 50%;
+  float: right;
+  margin-top: 31.59rpx
+}

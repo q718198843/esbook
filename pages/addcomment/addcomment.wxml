@@ -1,0 +1,17 @@
+<!--pages/addcomment/addcomment.wxml-->
+<view class='top_line'></view>
+<form bindsubmit="submit" report-submit="true">
+  <view class='view'>
+    <textarea name="comment" placeholder='请输入{{Type}}'></textarea>
+    <view class='photo'>
+        <block wx:for="{{images}}" wx:key="{{index}}">
+          <view>
+            <image src='{{ item }}' bindtap='previewImage' data-src="{{item}}"></image>
+            <image src='/images/upload/1@2x.png' class='del' data-index='{{index}}' bindtap='delImage'></image>
+          </view>
+        </block> 
+        <image src='/images/upload/2@2x.png' class='up' bindtap='upPhoto'></image> 
+      </view>
+  </view>
+  <button form-type='submit' class='btn'>提交</button>
+</form>

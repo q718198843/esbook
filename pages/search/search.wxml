@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<!-- <view class='search'>
+  <view class='left'>
+    <input type='text' placeholder='请输入商品名称' bindinput="bindinput" bindblur="bindblur"></input>
+    <image src='/images/index/2@3x.png'></image>
+  </view>
+  <text class='right'>搜索</text>
+</view>
+<view wx:if="{{!showSearch}}">
+  <view>1</view>
+  <view>2</view>
+</view> -->
+<import src="/pages/wxSearch/wxSearch.wxml"/>
+
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/>

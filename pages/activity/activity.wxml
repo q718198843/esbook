@@ -1,0 +1,27 @@
+<!--pages/activity/activity.wxml-->
+<view class='top_line'></view>
+<view class='title'>
+  {{title}}
+</view>
+<view class='time'>
+  {{time}}
+</view>
+<view class='hd_cont'>
+  <import src="../wxParse/wxParse.wxml"/>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<!-- <view class='images'>
+  这里是图片
+</view> -->
+<!-- <form bindsubmit="submit">
+  <text>填写以下信息：</text>
+  <view class="section">
+    <view class="section__title">联系人：</view>
+    <input name="name" placeholder="请输入联系人名称" type='text'/>
+  </view>
+  <view class="section">
+    <view class="section__title">手机号：</view>
+    <input name="tel" placeholder="请输入手机号码" maxlength="11" type='number'/>
+  </view>
+  <button class='btn' form-type="submit">提交</button>
+</form> -->

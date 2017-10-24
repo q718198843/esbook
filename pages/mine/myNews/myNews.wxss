@@ -1,0 +1,36 @@
+/* pages/mine/myNews/myNews.wxss */
+.wrap{
+  height: 102.96rpx;
+  width: 100%;
+  border-top: 1px solid #d8d8d8;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left{
+  width: 56.16rpx;
+  height: 56.16rpx;
+  position: relative;
+  margin-left: 23.4rpx;
+}
+.red{
+  position: absolute;
+  right: -9.36rpx;
+  top: -9.36rpx;
+  background: #DE2D48;
+  width: 18.72rpx;
+  height: 18.72rpx;
+  border-radius: 50%
+}
+.mid{
+  flex-grow: 1;
+  margin-left: 23.4rpx;
+  color: #333;
+  font-size: 32.76rpx
+}
+.right{
+  width: 16.38rpx;
+  height: 32.76rpx;
+  margin-right: 23.4rpx
+}

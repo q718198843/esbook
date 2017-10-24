@@ -1,0 +1,95 @@
+@import "/pages/shopList/shopList.wxss";
+@import "/pages/template/tabbar/tabbar.wxss";
+.header{
+  background-color: #fff;
+  height:70rpx;
+  border: 1px solid #d8d8d8;
+  margin: 11.7rpx;
+  line-height: 70rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 11.7rpx;
+  color: #999
+}
+.header image{
+  width: 46.8rpx;
+  height: 46.8rpx;
+  margin: 0 23.4rpx
+}
+swiper{
+  height: 388.44rpx;
+}
+.category{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  padding-top: 35.1rpx;
+  padding-bottom: 11.7rpx;
+  justify-content: center;
+}
+.category .cate{
+  white-space: normal;
+  padding: 16.38rpx 23.4rpx;
+  font-size: 28.08rpx;
+  color: #34C289;
+  /* height: 28.08rpx;
+  line-height: 28.08rpx; */
+  border:1px solid #34C289;
+  background-color: #fff;
+  border-radius: 117rpx;
+  margin-bottom: 23.4rpx;
+  margin-right: 16.38rpx;
+  margin-left: 16.38rpx; 
+}
+.category .cate.active{
+  background: #34C289;
+  box-shadow: 0px 2px 8px 0px #34C289;
+  color: #fff;
+  border: 1px solid transparent
+}
+.category .cate.two{
+  padding: 16.38rpx 32.76rpx
+}
+.sellBuy{
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px 0px rgba(66,66,66,0.17);
+  display: flex;
+  position: relative
+}
+.sellBuy view{
+  width: 50%;
+  text-align: center;
+  line-height: 102.96rpx;
+  font-size: 32.76rpx;
+  color: #666;
+}
+.sellBuy::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 32.76rpx;
+    background-color: #d8d8d8;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.sellBuy view.active{
+  color: #34C289
+}
+.line{
+  color: #fff;
+  height: 70.2rpx;
+  background: #34C289;
+  font-size: 28.08rpx;
+  line-height: 70.2rpx;
+  margin-top: 11.7rpx;
+  padding-left: 23.4rpx;
+}
+/* .margin-bottom{
+  margin-bottom: 138.4rpx
+} */
+.konggao{
+  height: 138.4rpx;
+  width: 100%
+}

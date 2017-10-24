@@ -1,0 +1,17 @@
+<!--pages/mine/comment/comment.wxml-->
+<view class='top_line'></view>
+<view class='wrap' wx:for="{{comment}}" wx:key="{{index}}" data-item="{{item}}" bindtap='detail'>
+  <view class='left'>
+    <image src='{{item.headPortrait}}'></image>
+  </view>
+  <view class='mid'>
+    <view>{{item.title}}</view>
+    <view>{{item.content}}</view>
+  </view>
+  <view class='right'>
+    <view>{{item.time}}</view>
+     <view class='unread' wx:if="{{item.isRead == undefined ? item.isRead:!item.isRead}}"></view> 
+  </view>
+</view>
+<image src='/images/kong.png' id='kong' wx:if="{{ comment =='' }}"></image>
+

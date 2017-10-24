@@ -1,0 +1,99 @@
+/* pages/mine/reBuy/reBuy.wxss */
+.wrap{
+  position: relative;
+  width: 100%;
+  margin-top: 23.4rpx;
+  height: 280.8rpx;
+  padding-bottom: 23.4rpx
+}
+.cont{
+  width: 702rpx; 
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px 0px rgba(66,66,66,0.35);
+  position: absolute;
+  left: 23.4rpx;
+  top: 0;
+  z-index: 2;
+  height: 280.8rpx;
+  display: flex;
+}
+.xj{
+  position: absolute;
+  right: 12.87rpx;
+  top: 18.72rpx;
+  width: 149.76rpx;
+  height: 107rpx;
+  font-size: 32.76rpx;
+  line-height: 107rpx;
+  text-align: center;
+  transform: rotate(20deg);
+  background-size: cover
+}
+.left{
+  height: 210.6rpx;
+  width: 210.6rpx;
+  padding-top: 35.1rpx;
+  padding-left: 23.4rpx
+}
+.right{
+  margin-left: 23.4rpx;
+  padding-top: 35.1rpx;
+  padding-bottom: 35.1rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.top .name{
+  font-size: 32.76rpx;
+  color: #333;
+  display: inline-block;
+  width: 229.32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.top text{
+  font-size: 23.4rpx;
+  color: #34C289;
+}
+.price{
+  font-size: 37.44rxp;
+  color: #E92A2F;
+  /* margin-top: 30rpx; */
+}
+.time{
+  font-size: 28.08rpx;
+  color: #999;
+  /* margin-top: 46rpx; */
+}
+.hk{
+  position: absolute;
+  right: 30rpx;
+  height: 280.8rpx;
+  top: 0;
+  z-index: 1;
+  display: flex;
+}
+.hk view{
+  width: 152.1rpx;
+  height: 280.8rpx;
+  text-align: center;
+  line-height: 280.8rpx;
+  font-size: 32.76rpx;
+  color: #666
+}
+.hk .bj{
+  background-color: #FFE538;
+  margin-right: 11.7rpx;
+}
+.hk .del{
+  background-color: #d8d8d8
+}
+.prompt{
+  width: 222.3rpx;
+  height: 126.36rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 70rpx;
+  margin-bottom: 70rpx;
+}

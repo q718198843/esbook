@@ -1,0 +1,56 @@
+/* pages/addcomment/addcomment.wxss */
+.view{
+  background-color: #fff;
+  padding-bottom: 23.4rpx;
+  border:1px solid transparent
+}
+textarea{
+  background-color: #fafafa;
+  width: 655.2rpx;
+  margin: 0 auto;
+  padding: 23.4rpx;
+  margin-top: 23.4rpx;
+  font-size: 30.42rpx;
+  color: #999
+}
+.btn{
+  height: 102.96rpx;
+  background-color: #34C289;
+  color: #fff;
+  font-size: 37.44rpx;
+  border-radius: 0;
+  border: none;
+  position: fixed;
+  width: 702rpx;
+  bottom: 70.2rpx;
+  left: 23.4rpx
+}
+.photo{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 23.4rpx
+}
+.photo view{
+  position: relative;
+  height: 114.66rpx;
+   margin-right: 17.55rpx;  
+  margin-top: 46.8rpx;
+}
+.photo image{
+  width: 114.66rpx;
+  height: 114.66rpx;
+}
+.photo .up{
+  width: 79.56rpx;
+  height: 79.56rpx;
+   margin-right: 17.55rpx;  
+  margin-top: 46.8rpx;
+}
+.photo view .del{
+  width: 37.44rpx;
+  height: 37.44rpx;
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx
+}

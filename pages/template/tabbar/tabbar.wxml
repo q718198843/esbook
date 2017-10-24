@@ -1,0 +1,25 @@
+<!--pages/template/tabbar/tabbar.wxml-->
+<template name="tabbar">
+  <view class="tabbar">
+  <image src='/images/tabbar/tabbar.png' class='bj'></image>
+    <view class="icon {{ tabAc.sw ==0 ? 'active':'' }}" bindtap="tabbarTab" data-index="首页">
+        <view class="image">
+          <image src="{{ tabAc.sw ==0 ? '/images/tabbar/home2@3x.png':'/images/tabbar/home1@3x.png' }}"></image>
+      </view>
+      <view>首页</view>  
+    </view>
+     <view class="icon" bindtap="tabbarTab" data-index="上传" >
+        <view class="image icon-upload">
+            <image src="/images/tabbar/shangchuan2@3x.png"></image>
+        </view>
+    </view>
+    <view class="icon {{ tabAc.sw ==1 ? 'active':'' }}" bindtap="tabbarTab" data-index="我的">
+        <view class="image icon-mine">
+        <view class='isRead' wx:if="{{tabAc.isRead}}"></view>
+        <image src="{{tabAc.sw ==1 ? '/images/tabbar/gerenzhongxin2@3x.png':'/images/tabbar/gerenzhongxin1@3x.png'}}"></image>
+      </view>
+      <view>我的</view>  
+    </view> 
+  </view>
+</template>
+

@@ -1,0 +1,38 @@
+<!--pages/mine/myNews/myNews.wxml-->
+<view class='top_line'></view>
+<view class='wrap' bindtap='jump' data-type='关注'>
+  <view class='left'>
+    <image src='/images/mine/x-1@2x.png'></image>
+    <!-- <view class='red'></view> -->
+  </view>
+  <view class='mid'>
+    我的关注
+  </view>
+  <view class='right'>
+    <image src='/images/mine/2@2x.png'></image>
+  </view>
+</view>
+<view class='wrap' bindtap='jump' data-type='收藏'>
+  <view class='left'>
+    <image src='/images/mine/x-2@2x.png'></image>
+    <!-- <view class='red'></view> -->
+  </view>
+  <view class='mid'>
+    我的收藏
+  </view>
+  <view class='right'>
+    <image src='/images/mine/2@2x.png'></image>
+  </view>
+</view>
+<view class='wrap' bindtap='jump' data-type='留言'>
+  <view class='left'>
+    <image src='/images/mine/x-1@2x.png'></image>
+     <view class='red' wx:if="{{isRead}}"></view> 
+  </view>
+  <view class='mid'>
+    我的评论
+  </view>
+  <view class='right'>
+    <image src='/images/mine/2@2x.png'></image>
+  </view>
+</view>

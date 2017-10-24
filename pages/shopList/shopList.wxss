@@ -1,0 +1,138 @@
+/* pages/template/shopList/shopList.wxss */
+.shopListWrap{
+  /* padding: 0 23.4rpx; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.shopListWrap .shop{
+  margin-top: 11.7rpx;
+  margin-bottom: 23.4rpx;
+  width: 655.2rpx;
+  height: 400.6rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px 0px rgba(66,66,66,0.35);
+  border-radius: 6px;
+  padding: 35.1rpx 23.4rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden
+}
+.shopListWrap .shop .shop_top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23.4rpx
+}
+.shopListWrap .shop text{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.shopListWrap .shop .shop_top .user{
+  display: flex;
+  align-items: center
+}
+.shopListWrap .shop .shop_top .portrait{
+  width: 79.56rpx;
+  height: 79.56rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+.shopListWrap .shop .shop_top .shop_username{
+    padding-left: 23.4rpx; 
+    color: #333;
+    font-size: 30.42rpx;
+}
+.shopListWrap .shop .shop_top .shop_username image{
+  width: 30.42rpx;
+  height: 30.42rpx;
+  padding-left: 11.7rpx
+}
+.shopListWrap .shop .shop_top .time{
+   color: #999;
+   font-size: 28.08rpx;
+   white-space: nowrap
+}
+.shopListWrap .shop .shop_bot{
+  display: flex
+}
+.shopListWrap .shop .shop_bot .b_left{
+  width: 210.6rpx;
+  height: 257.4rpx;
+  position: relative;
+   border: 1px solid #fff 
+}
+.shopListWrap .shop .shop_bot .b_right{
+  padding-left: 23.4rpx;
+  display: flex;
+  flex-direction: column;
+   margin-top: -5rpx;
+}
+.shopListWrap .shop .shop_bot .b_right .text1{
+  font-size: 32.76rpx;
+  color: #333;
+  width: 362rpx;
+}
+.shopListWrap .shop .shop_bot .b_right .text2{
+  font-size: 28.08rpx;
+  color: #34C289;
+  padding-top: 11.7rpx;
+  width: 362rpx;
+}
+.shopListWrap .shop .shop_bot .b_right .text3{
+  font-size: 28.08rpx;
+  color: #666;
+  padding-top: 23.4rpx;
+  width: 362rpx;
+  /* height: 40rpx; */
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.shopListWrap .shop .shop_bot .b_right .text_bot{
+  /* padding-top:25rpx; */
+  display: -moz-box;
+  display: box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end;
+  width: 100%;
+  /* position: relative */
+}
+.shopListWrap .shop .shop_bot .b_right .text_bot text{
+  font-size: 23.4rpx;
+  color: #999;
+}
+.message{
+  margin-left: -40.4rpx
+}
+.shopListWrap .shop .shop_bot .b_right .text_bot view{
+  /* display: -moz-box;
+  display: box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end; */
+  width: 100%
+}
+.shopListWrap .shop .shop_bot .b_right .price{
+  font-size: 37.44rpx;
+  color: #E92A2F;
+  padding-right: 11.7rpx;
+  padding-top: 25rpx
+}
+.image1{
+  filter: blur(3px);
+}
+#formBtn{
+border:none;
+  text-align:left;
+  padding:0;
+  margin:0;
+  line-height:1.5;
+}

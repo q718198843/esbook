@@ -1,0 +1,68 @@
+/* pages/upPhotos/upPhotos.wxss */
+.icon{
+  width: 515.97rpx;
+  height: 353.34rpx;
+  padding-top: 160.82rpx;
+  padding-left: 115.83rpx;
+}
+.overflow{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.up{
+  padding: 0 20px;
+  padding-top: 203.58rpx;
+}
+.up view{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35.1rpx;
+  background-color: #34C289;
+  color: #fff;
+  font-size: 37.44rpx;
+  height: 102.96rpx;
+  line-height: 102.96rpx;
+  border-radius: 11.7rpx
+}
+.wrap{
+  background-color: rgba(0, 0, 0, .5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.choice{
+  position: absolute;
+  left: 0;
+  bottom: -500rpx;
+  width: 100%;
+  display:  flex;
+  align-items: center;
+  flex-direction: column;
+}
+.choice>view{
+  width: 702rpx;
+  text-align: center;
+  line-height: 102.96rpx;
+  background-color: #fff;
+  border-radius: 23.4rpx;
+  color: #666;
+  font-size: 37.44rpx
+}
+.choice .photo{
+  border-bottom: 1px solid #d8d8d8
+}
+.choice .close{
+  margin-top: 23.4rpx;
+}
+.tran{
+  display: block
+}
+.tran .choice{
+  bottom: 23.4rpx;
+}

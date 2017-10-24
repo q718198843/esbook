@@ -1,0 +1,47 @@
+<!--pages/template/shopList/shopList.wxml-->
+<template name="shopList">
+  <view class='shopListWrap'>
+  <form bindsubmit="submit" report-submit="true">
+  
+    <block wx:for='{{listLoop}}' wx:key="{{index}}">
+      <view class='shop' catchtap='detail' data-id="{{item.id}}">
+        <view class='shop_top'>
+          <view class='user' catchtap='others' data-id="{{item.userId}}">
+            <view  class='portrait'>
+              <image src='{{item.headPortrait}}'></image>
+            </view>
+            <view class='shop_username'>
+                <text>{{ item.userName=="" ? "某某名称" : item.userName  }}</text>
+              <image src='{{ item.gender == 2 ? "/images/index/4@3x.png":"/images/index/3@3x.png" }}'></image>
+            </view>
+          </view>
+          <view class='time'>{{item.createTime}}</view>
+        </view>
+        <button id='formBtn' form-type="submit" hover-class="none" plain="true">
+        <view class='shop_bot'>
+          <view class='b_left'>
+            <image src='{{item.imageUrl[0]}}' class='image1'></image>
+            <image src='{{item.imageUrl[0]}}' mode="aspectFit" class='image2'></image>
+          </view>
+          <view class='b_right'>
+            <text class='text1'>{{item.name}}</text>
+            <text class='text2'>{{item.code}}</text>
+            <view class='text3'>{{item.describes}}</view>
+            <text class='price'>${{item.price!=undefined ? item.price : 0}}</text>
+            <view class='text_bot'>
+              <view class='jiage'>
+                
+                <text class='oprice'>{{item.originalPrice == undefined ? '原价0' :"原价$" + item.originalPrice }}</text>
+              </view>
+              <text class='message'>浏览量{{item.num ? item.num : 0}}</text>
+            </view>
+          </view>
+        </view>
+        </button>
+      </view>
+    </block>
+    
+    </form>
+  </view>
+  
+</template>

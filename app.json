@@ -1,0 +1,35 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/upPhotos/upPhotos",
+    "pages/detail/Detail",
+    "pages/confirm/confirm",
+    "pages/otherHome/otherHome",
+    "pages/goodsDetails/goodsDetails",
+    "pages/demand/demand",
+    "pages/mine/mine",
+    "pages/mine/personalInfo/personalInfo",
+    "pages/mine/input/input",
+    "pages/mine/reBuy/reBuy",
+    "pages/list/list",
+    "pages/mine/comment/comment",
+    "pages/mine/myNews/myNews",
+    "pages/mine/collection/collection",
+    "pages/mine/follow/follow",
+    "pages/activity/activity",
+    "pages/search/search",
+    "pages/isphone/isphone",
+    "pages/mine/feedback/feedback",
+    "pages/mine/changePhone/changePhone",
+    "pages/addcomment/addcomment",
+    "pages/editshop/editshop",
+    "pages/editBuy/editBuy",
+    "pages/getPage/getPage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小村大优",
+    "navigationBarTextStyle": "black"
+  }
+}
